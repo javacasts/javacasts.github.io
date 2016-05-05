@@ -1,34 +1,3 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
-@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:900');
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  &:after, &:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  margin: 0;
-  padding: 0;
-  background: 0 0;
-  border: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background: #f6f6f6;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #666;
-  text-align: left;
-}
 
 .block:after {
   content: ' ';
@@ -36,7 +5,9 @@ body {
   clear: both;
 }
 
-.header, .section, .footer {
+.header,
+.section,
+.footer {
   display: block;
   width: 100%;
   padding: 20px;
@@ -55,21 +26,14 @@ body {
   float: left;
 }
 
-.logo__link {
+.logo__link,
+.logo__link:hover {
   display: block;
   font-family: 'Raleway';
   font-weight: 900;
   font-size: 20px;
   color: #fff;
   text-decoration: none;
-  &:hover {
-    display: block;
-    font-family: 'Raleway';
-    font-weight: 900;
-    font-size: 20px;
-    color: #fff;
-    text-decoration: none;
-  }
 }
 
 .menu {
@@ -84,13 +48,10 @@ body {
   margin-left: 1em;
 }
 
-.menu__item-link {
+.menu__item-link,
+.menu__item-link:hover {
   color: #fff;
   text-decoration: none;
-  &:hover {
-    color: #fff;
-    text-decoration: none;
-  }
 }
 
 .list {
@@ -99,21 +60,20 @@ body {
 
 .list__item {
   display: block;
-  ~ .list__item {
-    margin-top: 20px;
-  }
 }
 
-.video__title-link {
+.list__item ~ .list__item {
+  margin-top: 20px;
+}
+
+.video__title-link,
+.video__title-link:hover {
   color: #000;
   text-decoration: none;
-  &:hover {
-    color: #000;
-    text-decoration: none;
-  }
 }
 
-.video__title, .video__date {
+.video__title,
+.video__date {
   display: block;
   margin-bottom: 15px;
 }
@@ -129,8 +89,7 @@ body {
   width: 100%;
   height: 0;
   margin-bottom: 20px;
-  padding-top: 56.25%;
-  /* = 100/1920*1080 */
+  padding-top: 56.25%; /* = 100/1920*1080 */
 }
 
 .youtube__frame {
@@ -170,29 +129,32 @@ body {
   margin-bottom: 20px;
   padding: 15px;
   line-height: 1;
-  &.message--success {
-    background: #d3f3c0;
-    border: 1px solid #a5d985;
-    color: #557143;
-  }
-  &.message--notice {
-    background: #fff3c5;
-    border: 1px solid #ffe075;
-    color: #937f38;
-  }
-  &.message--error {
-    background: #ffe3e2;
-    border: 1px solid #efb1af;
-    color: #cc0000;
-  }
+}
+
+.message.message--success {
+  background: #d3f3c0;
+  border: 1px solid #a5d985;
+  color: #557143;
+}
+
+.message.message--notice {
+  background: #fff3c5;
+  border: 1px solid #ffe075;
+  color: #937f38;}
+
+.message.message--error {
+  background: #ffe3e2;
+  border: 1px solid #efb1af;
+  color: #cc0000;
 }
 
 .comment {
   display: block;
   position: relative;
-  ~ .comment {
-    margin-top: 15px;
-  }
+}
+
+.comment ~ .comment {
+  margin-top: 15px;
 }
 
 .comment__text {
@@ -200,30 +162,33 @@ body {
   position: relative;
   padding: 15px;
   background: #eee;
-  &:after {
-    content: '';
-    position: absolute;
-    left: 20px;
-    bottom: -20px;
-    width: 0;
-    height: 0;
-    border-width: 10px;
-    border-style: solid;
-    border-color: #eee transparent transparent transparent;
-  }
+}
+
+.comment__text:after {
+  content: '';
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #eee transparent transparent transparent;
 }
 
 .comment__author {
   display: block;
   text-decoration: none;
-  &:hover {
-    text-decoration: none;
-  }
-  &:after {
-    content: ' ';
-    display: table;
-    clear: both;
-  }
+}
+
+.comment__author:hover {
+  text-decoration: none;
+}
+
+.comment__author:after {
+  content: ' ';
+  display: table;
+  clear: both;
 }
 
 .comment__image {
@@ -251,11 +216,12 @@ body {
 
 .paging {
   margin-top: 20px;
-  &:after {
-    content: ' ';
-    display: table;
-    clear: both;
-  }
+}
+
+.paging:after {
+  content: ' ';
+  display: table;
+  clear: both;
 }
 
 .paging__button {
@@ -265,51 +231,62 @@ body {
   color: #fff;
   text-decoration: none;
   line-height: 1;
-  &:hover {
-    text-decoration: none;
-  }
-  &.paging__button--prev {
-    float: left;
-    &:before {
-      content: '\00ab\0020';
-    }
-  }
-  &.paging__button--next {
-    float: right;
-    &:after {
-      content: '\0020\00bb';
-    }
-  }
 }
 
-.content {
-  h1, h2, h3, h4, h5, h6, p {
-    margin-bottom: 15px;
-  }
-  pre {
-    margin-bottom: 15px;
-    &[class*="language-"] {
-      margin-bottom: 15px;
-    }
-  }
-  a {
-    color: #000;
-    text-decoration: none;
-    &:hover {
-      color: #000;
-      text-decoration: underline;
-    }
-  }
+.paging__button:hover {
+  text-decoration: none;
+}
+
+.paging__button.paging__button--prev {
+  float: left;
+}
+
+.paging__button.paging__button--prev:before {
+  content: '\00ab\0020';
+}
+
+.paging__button.paging__button--next {
+  float: right;
+}
+
+.paging__button.paging__button--next:after {
+  content: '\0020\00bb';
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.content p {
+  margin-bottom: 15px;
+}
+
+.content pre,
+.content pre[class*="language-"] {
+  margin-bottom: 15px;
+}
+
+.content a {
+  color: #000;
+  text-decoration: none;
+}
+
+.content a:hover {
+  color: #000;
+  text-decoration: underline;
 }
 
 .social {
   display: block;
   margin-bottom: 15px;
-  &:after {
-    content: ' ';
-    display: table;
-    clear: both;
-  }
+}
+
+.social:after {
+  content: ' ';
+  display: table;
+  clear: both;
 }
 
 .social__item {
@@ -325,21 +302,26 @@ body {
   text-decoration: none;
   text-align: center;
   cursor: pointer;
-  &:hover {
-    text-decoration: none;
-  }
-  &.share--twitter {
-    background: #55acee;
-  }
-  &.share--facebook {
-    background: #3b5998;
-  }
-  &.share--plus {
-    background: #dc4e41;
-  }
-  &.share--email {
-    background: #444;
-  }
+}
+
+.share:hover {
+  text-decoration: none;
+}
+
+.share.share--twitter {
+  background:#55acee;
+}
+
+.share.share--facebook {
+  background:#3b5998;
+}
+
+.share.share--plus {
+  background:#dc4e41;
+}
+
+.share.share--email {
+  background:#444;
 }
 
 .share__action {
@@ -364,141 +346,193 @@ body {
 .footer__link {
   color: #666;
   text-decoration: none;
-  &:hover {
-    color: #333;
-    text-decoration: none;
-  }
+}}
+
+.footer__link:hover {
+  color: #333;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 500px) {
-  .header, .section, .footer {
+
+  .header,
+  .section,
+  .footer {
     padding: 30px;
   }
-  .logo__link {
+
+  .logo__link,
+  .logo__link:hover {
     font-size: 30px;
-    &:hover {
-      font-size: 30px;
-    }
   }
+
   .menu__item {
     line-height: 35px;
   }
+
   .list__item ~ .list__item {
     margin-top: 30px;
   }
+
   .video {
     position: relative;
     padding-left: 200px;
     min-height: 100px;
   }
+
   .video__poster {
     position: absolute;
     top: 0;
     left: 0;
     width: 170px;
   }
+
   .youtube {
     margin-bottom: 30px;
   }
+
   .details__title {
     margin-bottom: 15px;
     font-size: 22px;
   }
+
   .details__date {
     margin-bottom: 30px;
   }
+
   .details__headline {
     margin-bottom: 15px;
     font-size: 18px;
   }
-  .details-description, .message {
+
+  .details-description {
     margin-bottom: 30px;
   }
-  .comment ~ .comment, .paging {
+
+  .message {
+    margin-bottom: 30px;
+  }
+
+  .comment ~ .comment {
     margin-top: 30px;
   }
-  .content {
-    h1, h2, h3, h4, h5, h6, p {
-      margin-bottom: 30px;
-    }
-    pre {
-      margin-bottom: 30px;
-      &[class*="language-"] {
-        margin-bottom: 30px;
-      }
-    }
+
+  .paging {
+    margin-top: 30px;
   }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6,
+  .content p {
+    margin-bottom: 30px;
+  }
+  .content pre,
+  .content pre[class*="language-"] {
+    margin-bottom: 30px;
+  }
+
   .social {
     margin-bottom: 30px;
   }
+
   .social__item {
     width: 25%;
   }
+
 }
 
 @media screen and (min-width: 900px) {
+
   .block {
     max-width: 800px;
     margin: 0 auto;
   }
-  .header, .section, .footer {
+
+  .header,
+  .section,
+  .footer {
     padding: 50px;
   }
-  .logo__link {
+
+  .logo__link,
+  .logo__link:hover {
     font-size: 40px;
-    &:hover {
-      font-size: 40px;
-    }
   }
+
   .menu__item {
     line-height: 50px;
   }
+
   .list__item ~ .list__item {
     margin-top: 50px;
   }
+
   .video {
     padding-left: 250px;
   }
+
   .video__poster {
     width: 200px;
   }
+
   .youtube {
     margin-bottom: 50px;
   }
+
   .details__title {
     margin-bottom: 25px;
     font-size: 24px;
   }
+
   .details__date {
     margin-bottom: 50px;
   }
+
   .details__headline {
     margin-bottom: 25px;
     font-size: 20px;
   }
-  .details-description, .message {
+
+  .details-description {
     margin-bottom: 50px;
   }
+
+  .message {
+    margin-bottom: 50px;
+  }
+
   .comment ~ .comment {
     margin-top: 50px;
   }
+
   .comment__author {
     margin-top: 10px;
   }
+
   .paging {
     width: 300px;
     margin: 50px auto 0 auto;
   }
+
   .social {
     margin-bottom: 50px;
   }
+
   .share {
     padding: 20px;
   }
-  .share__action, .share__service {
+
+  .share__action,
+  .share__service {
     display: inline-block;
     margin: 0;
     line-height: 20px;
     vertical-align: middle;
   }
+
 }
+

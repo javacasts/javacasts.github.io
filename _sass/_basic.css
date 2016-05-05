@@ -1,0 +1,28 @@
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:900');
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background: 0 0;
+  border: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #f6f6f6;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #666;
+  text-align: left;
+}
