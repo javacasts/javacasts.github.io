@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2016-05-05 18:07:09 +0200
+title:  "Asynchronous Method Call"
+date:   2016-02-14 12:53:00 +0200
 categories: jekyll update
+thumbnail: https://i.ytimg.com/vi/W0LA5SgUkHg/mqdefault.jpg
+abstract: Run processes parallel instead of running them one by one.
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
