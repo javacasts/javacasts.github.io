@@ -23,6 +23,7 @@ Create a project by configuring and downloading it from
 [start.spring.io][start].
 
 The main class that will be executed looks like this:
+
 ```java
 package javacasts;
 
