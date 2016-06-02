@@ -1,12 +1,13 @@
     <header class="header">
       <div class="block">
-        <h1 class="logo">
-          <a href="{{ site.baseurl }}/" class="logo__link">{{ site.title }}</a>
+        <h1 class="logo" itemscope="itemscope" itemtype="http://schema.org/Organization" itemprop="publisher">
+          <img itemprop="logo" width="600" height="60" src="{{ "/assets/logo-600x60.png" | prepend: site.url }}" style="display:none" />
+          <a href="{{ site.url }}/" class="logo__link" itemprop="name url">{{ site.title }}</a>
         </h1>
         <nav class="menu">
           <ul>
             <li class="menu__item">
-{% for my_page in site.pages %}{% if my_page.title and my_page.skip != true %}              <a class="menu__item-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+{% for my_page in site.pages %}{% if my_page.title and my_page.skip != true %}              <a class="menu__item-link" href="{{ my_page.url | prepend: site.url }}">{{ my_page.title }}</a>
 {% endif %}{% endfor %}            </li>
           </ul>
         </nav>
