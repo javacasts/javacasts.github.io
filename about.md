@@ -15,6 +15,9 @@ Schlüsselbergstr. 3
 81673 München  
 Germany
 
+Hosting by [GitHub Pages](https://pages.github.com/)  
+Videos by [YouTube](https://youtube.com/)
+
 ## License
 
 All JavaCasts episodes are under the Creative Commons license. You are

@@ -18,7 +18,7 @@ This policy was last modified on June 2, 2016.
 
 ### Personal Information
 
-No user information is collected.
+No user information is collected by [javacasts.net](/about.html).
 
 ### Third Parties
 
