@@ -46,7 +46,7 @@ layout: default
   "headline": "{{ page.title | xml_escape }}",{% if page.video %}
   "image": "https://i.ytimg.com/vi/{{page.video}}/mqdefault.jpg",{% endif %}
   "keywords": "{{ page.categories | join: " " | xml_escape }}",
-  "publisher": "{{ site.title | xml_escape }}",
+  "publisher": { "@type": "Organization", "name": "{{ site.title | xml_escape }}" },
   "url": "{{ page.url | prepend: site.baseurl | prepend: site.url | xml_escape }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateCreated": "{{ page.date | date_to_xmlschema }}",
