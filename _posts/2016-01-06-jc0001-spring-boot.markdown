@@ -5,6 +5,7 @@ date:       2016-01-06 14:54:48 +0000
 categories: spring boot
 video:      iZyx3rbTDRQ
 abstract:   "Run processes parallel instead of running them one by one."
+topic:      http://projects.spring.io/spring-boot/
 ---
 Spring boot
 ===========
