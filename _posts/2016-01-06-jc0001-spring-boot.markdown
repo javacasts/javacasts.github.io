@@ -39,7 +39,7 @@ public class BootApplication {
 }
 ```
 
-When this `BootApplication` is startedm it calls `SpringApplication.run` with
+When this `BootApplication` is started, it calls `SpringApplication.run` with
 the class itself and the call-arguments. Spring now decides what to do. As the
 `BootApplication` is annotated with `SpringBootApplication`, spring now makes
 some "magic".  
