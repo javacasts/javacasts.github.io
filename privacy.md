@@ -1,7 +1,8 @@
 ---
-layout: page
-title: Privacy
+layout:    page
+title:     Privacy
 permalink: /privacy.html
+skip:      true
 ---
 
 ## Privacy Policy

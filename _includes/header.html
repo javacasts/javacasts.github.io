@@ -6,7 +6,7 @@
         <nav class="menu">
           <ul>
             <li class="menu__item">
-{% for my_page in site.pages %}{% if my_page.title %}              <a class="menu__item-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+{% for my_page in site.pages %}{% if my_page.title and my_page.skip != true %}              <a class="menu__item-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
 {% endif %}{% endfor %}            </li>
           </ul>
         </nav>

@@ -5,6 +5,10 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "/page:num/"
+
 # Site settings
 title: JavaCasts
 email: info@javacasts.net
