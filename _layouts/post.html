@@ -40,3 +40,16 @@ layout: default
         </article>
       </div>
     </section>
+    <script type="application/ld+json">
+{ "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ page.title }}",{% if page.video %}
+  "image": "https://i.ytimg.com/vi/{{page.video}}/mqdefault.jpg",{% endif %}
+  "keywords": "{{ page.categories | join: " " }}",
+  "publisher": "{{ site.title }}",
+  "url": "{{ page.url | prepend: site.baseurl | prepend: site.url }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateCreated": "{{ page.date | date_to_xmlschema }}",
+  "description": "{{ page.abstract | xml_escape }}"
+}
+    </script>
