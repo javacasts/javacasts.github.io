@@ -13,7 +13,7 @@ cloud. It's agnostic to any solution on clustering your services and
 mainly shows the usage of [spring-cloud].
 
 We will build something that looks like this:  
-![image](cloud.png)
+![image]({{ site.url }}/assets/jc0005-cloud.png)
 
 What's interesting here is that we almost do not write any code to build
 a system like this.
@@ -134,7 +134,7 @@ configuration for the hello service in the configuration, see
 If you have all servers running, the hello service will register itself
 at the discovery-service. if you open `http://localhost:8085/`, you will
 find the dashboard of eureka with a *hello*-service registered:  
-![eureka](eureka.png)
+![eureka]({{ site.url }}/assets/jc0005-eureka.png)
 
 ## Proxy
 

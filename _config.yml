@@ -12,6 +12,7 @@ paginate_path: "/page:num/"
 # Site settings
 title: JavaCasts
 email: info@javacasts.net
+description: "Java Screencasts"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://javacasts.net" # the base hostname & protocol for your site
 twitter_username: javacasts
