@@ -5,7 +5,6 @@ date:       2016-05-07 12:11:33 +0000
 categories: spring cloud
 video:      FfWj2tI9nZ0
 abstract:   How to get some loose coupled services using spring cloud.
-topic:      http://projects.spring.io/spring-cloud/
 author:     "Rainer Jung"
 ---
 # Spring cloud

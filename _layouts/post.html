@@ -44,7 +44,8 @@ layout: default
     </section>
     <script type="application/ld+json">
 { "@context": "http://schema.org",
-  "@type": "BlogPosting",
+  "@type": "Article",
+  "@id": "{{ page.url | prepend: site.url | xml_escape }}",
   "headline": "{{ page.title | xml_escape }}",{% if page.video %}
   "image": { "@type": "ImageObject", "url": "https://i.ytimg.com/vi/{{page.video}}/mqdefault.jpg", "width": 320, "height": 180 },{% endif %}
   "keywords": "{{ page.categories | join: " " | xml_escape }}",
@@ -52,11 +53,7 @@ layout: default
   "url": "{{ page.url | prepend: site.url | xml_escape }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateCreated": "{{ page.date | date_to_xmlschema }}",
-  "dateModified": "{{ page.date | date_to_xmlschema }}",{% if page.topic %}
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "{{ page.topic | xml_escape }}"
-  },{% endif %}{% if page.author %}
+  "dateModified": "{{ page.date | date_to_xmlschema }}",{% if page.author %}
   "author": { "@type": "Person", "name": "{{ page.author | xml_escape }}" },{% endif %}
   "description": "{{ page.abstract | xml_escape }}"
 }
