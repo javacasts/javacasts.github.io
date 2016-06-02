@@ -46,7 +46,7 @@ layout: default
   "headline": "{{ page.title | xml_escape }}",{% if page.video %}
   "image": { "@type": "ImageObject", "url": "https://i.ytimg.com/vi/{{page.video}}/mqdefault.jpg", "width": 320, "height": 180 },{% endif %}
   "keywords": "{{ page.categories | join: " " | xml_escape }}",
-  "publisher": { "@type": "Organization", "name": "{{ site.title | xml_escape }}", "logo": { "@type": "ImageObject", "url": "{{ "favicon.ico" | prepend: site.baseurl | prepend: site.url }}", "width": 256, "height": 256 } },
+  "publisher": { "@type": "Organization", "name": "{{ site.title | xml_escape }}", "logo": { "@type": "ImageObject", "url": "{{ "/assets/logo-800x80.png" | prepend: site.baseurl | prepend: site.url }}", "width": 800, "height": 80 } },
   "url": "{{ page.url | prepend: site.baseurl | prepend: site.url | xml_escape }}",
   "datePublished": "{{ page.date | date_to_xmlschema }}",
   "dateCreated": "{{ page.date | date_to_xmlschema }}",
