@@ -14,13 +14,11 @@ protect user privacy consistent within the guidelines set forth in this
 policy and the law. By using this site, you consent to the following
 privacy policy.
 
-This policy was last modified on January 1, 2016.
+This policy was last modified on June 2, 2016.
 
 ### Personal Information
 
 No user information is collected.
-
-No Cookies are set.
 
 ### Third Parties
 
@@ -32,3 +30,8 @@ protect ours or others rights, property, or safety.
 Any linked, third party sites have separate and independent privacy
 policies. We therefore have no responsibility or liability for the
 content and activities of these linked sites.
+
+#### Hosting
+
+The site is hosted via [GitHub Pages](https://pages.github.com/), the
+videos are hosted by [YouTube](https://youtube.com/).
