@@ -6,6 +6,7 @@ categories: spring
 video:      W0LA5SgUkHg
 abstract:   "Run processes parallel instead of running them one by one."
 topic:      https://spring.io/guides/gs/async-method/
+author:     "Rainer Jung"
 ---
 Async calls with spring
 =======================

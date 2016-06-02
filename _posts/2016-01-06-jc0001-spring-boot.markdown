@@ -6,6 +6,7 @@ categories: spring boot
 video:      iZyx3rbTDRQ
 abstract:   "Run processes parallel instead of running them one by one."
 topic:      http://projects.spring.io/spring-boot/
+author:     "Rainer Jung"
 ---
 Spring boot
 ===========
