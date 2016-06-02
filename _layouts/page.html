@@ -5,3 +5,13 @@ layout: default
       <div class="block">
 {{ content }}      </div>
     </section>
+    <script type="application/ld+json">
+      { "@type": "Organization",
+        "name": "{{ site.title | xml_escape }}",
+        "logo": { "@type": "ImageObject", "url": "{{ "/assets/logo-600x60.png" | prepend: site.url }}", "width": 600, "height": 60 },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "url": "https://gitter.im/javacasts/requests",
+          "availableLanguage": "en de"
+        } }
+    </script>
