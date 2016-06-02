@@ -57,7 +57,7 @@ layout: default
     "@type": "WebPage",
     "@id": "{{ page.topic | xml_escape }}"
   },{% endif %}{% if page.author %}
-  "author": { "@type": "Person", "name": "{{ page.author | xml_escape }}" },
+  "author": { "@type": "Person", "name": "{{ page.author | xml_escape }}" },{% endif %}
   "description": "{{ page.abstract | xml_escape }}"
 }
     </script>
