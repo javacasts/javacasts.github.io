@@ -14,6 +14,7 @@ title: JavaCasts
 email: info@javacasts.net
 description: "Java Screencasts"
 url: "http://www.javacasts.net" # the base hostname & protocol for your site
+baseurl: ""
 twitter_username: javacasts
 github_username:  javacasts
 
