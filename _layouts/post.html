@@ -55,7 +55,7 @@ layout: default
   "dateCreated": "{{ page.date | date_to_xmlschema }}",
   "dateModified": "{{ page.date | date_to_xmlschema }}",{% if page.author %}
   "author": { "@type": "Person", "name": "{{ page.author | xml_escape }}" },{% endif %}
-  "mainEntityOfPage": { "@Type": "WebPage", "url": "{{ page.url | prepend: site.url | xml_escape }}" },
+  "mainEntityOfPage": { "@type": "WebPage", "url": "{{ page.url | prepend: site.url | xml_escape }}" },
   "description": "{{ page.abstract | xml_escape }}"
 }
     </script>
