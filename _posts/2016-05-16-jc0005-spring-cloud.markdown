@@ -2,6 +2,7 @@
 layout:     post
 title:      "Spring Cloud"
 date:       2016-05-07 12:11:33 +0000
+modified:   2016-06-03 19:10:46 +0200
 categories: spring cloud
 video:      FfWj2tI9nZ0
 abstract:   How to get some loose coupled services using spring cloud.
@@ -71,7 +72,7 @@ Now it's time to use the configuration-service. I've already introduced
 the configuration for the service named `hello`.
 
 It's a pretty simple spring-boot-service (see
-[javacasts episode 1](http://javacasts.net/video/iZyx3rbTDRQ) on spring
+[javacasts episode 1](http://www.javacasts.net/spring/boot/2016/01/06/jc0001-spring-boot.html) on spring
 boot), it will only return a simple string.
 
 ```java
