@@ -4,7 +4,7 @@ title:      "Spring Cloud"
 date:       2016-05-07 12:11:33 +0000
 modified:   2016-07-09 11:53:29 +0200
 categories: spring cloud
-keywords:   java, spring, cloud, spring-cloud, centralized configuration, service-discovery, reverse-proxy, microservice
+keywords:   java, spring, cloud, spring-cloud, centralized configuration, service-discovery, reverse-proxy, microservice, zuul, configserver, git
 video:      FfWj2tI9nZ0
 abstract:   How to get some loose coupled services using spring cloud.
 author:     "Rainer Jung"
