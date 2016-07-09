@@ -2,6 +2,7 @@
 layout:     post
 title:      "Asynchronous Method Call"
 date:       2016-02-14 13:43:08 +0200
+modified:   2016-07-09 11:53:29 +0200
 categories: spring
 keywords:   java, asynchronous calls, spring, spring async, annotation
 video:      W0LA5SgUkHg
