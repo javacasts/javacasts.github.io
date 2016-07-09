@@ -5,7 +5,7 @@ date:       2016-01-06 14:54:48 +0000
 modified:   2016-06-03 01:16:35 +0200
 categories: spring boot
 video:      iZyx3rbTDRQ
-abstract:   "Run processes parallel instead of running them one by one."
+abstract:   "Run java applications easily for the console a REST-API or a WebService"
 author:     "Rainer Jung"
 ---
 Spring boot
