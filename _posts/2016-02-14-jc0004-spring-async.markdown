@@ -3,6 +3,7 @@ layout:     post
 title:      "Asynchronous Method Call"
 date:       2016-02-14 13:43:08 +0200
 categories: spring
+keywords:   java, asynchronous calls, spring, spring async, annotation
 video:      W0LA5SgUkHg
 abstract:   "Run processes parallel instead of running them one by one."
 author:     "Rainer Jung"
