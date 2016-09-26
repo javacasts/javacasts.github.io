@@ -5,7 +5,7 @@ date:       2016-09-09 19:19:00 +0200
 modified:   2016-09-09 19:19:00 +0200
 categories: java
 keywords:   java, boxing, unboxing, NullpointerException
-video:      dwctTTMJaSM
+video:      vyv16tc_vEI
 abstract:   "Here's a funny issue that I ran over a while ago. We had some code and experienced a NullPointerException, but there could not be a NullPointerException, all involved Objects where tested to not be null. A mystery!"
 author:     "Rainer Jung"
 ---
