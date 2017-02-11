@@ -31,7 +31,7 @@ from [oracle](http://www.oracle.com/technetwork/java/javase/downloads/index.html
 Once installed, you should be able to call `java -version` and `javac -version`,
 which would print out the version you've installed.
 
-![`java -version`](java-version.png)
+![`java -version`]({{ site.url }}/assets/jcb01-java-version.png)
 
 Then you need an editor. Source files are plain text-files, so you could use the
 standard notepad in windows, but there are Integrated Development Environments
@@ -74,7 +74,7 @@ java HelloWorld
 
 This is how the outcome should look like:
 
-![`hello world`](hello-world.png)
+![`hello world`]({{ site.url }}/assets/jcb01-hello-world.png)
 
 So what has really happened here?  
 We compiled a java source file (`HelloWorld.java`) with the java compiler
