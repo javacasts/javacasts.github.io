@@ -2,7 +2,7 @@
 layout:     post
 title:      "Spring Cloud"
 date:       2016-05-07 12:11:33 +0000
-modified:   2016-07-09 11:53:29 +0200
+modified:   2018-11-22 18:48:38 +0100
 categories: spring cloud
 keywords:   java, spring, cloud, spring-cloud, centralized configuration, service-discovery, reverse-proxy, microservice, zuul, configserver, git
 video:      FfWj2tI9nZ0

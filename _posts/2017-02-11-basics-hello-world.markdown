@@ -2,7 +2,7 @@
 layout:     post
 title:      "Java Basics - HelloWorld"
 date:       2017-02-11 16:10:00 +0200
-modified:   2017-02-11 16:10:00 +0200
+modified:   2018-11-22 18:48:38 +0100
 categories: basics
 keywords:   java, basics, HelloWorld
 video:      r8U05bJIDQo

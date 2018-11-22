@@ -2,7 +2,7 @@
 layout:     post
 title:      "Spring boot"
 date:       2016-01-06 14:54:48 +0000
-modified:   2016-07-09 11:53:29 +0200
+modified:   2018-11-22 18:48:38 +0100
 categories: spring boot
 keywords:   java, spring boot, setup, applicationrunner
 video:      iZyx3rbTDRQ
@@ -47,8 +47,7 @@ the class itself and the call-arguments. Spring now decides what to do. As the
 some "magic".  
 Take a look at the [SpringBootApplication][sapp]-annotation, it itself is
 annotated with `@Configuration`, `@EnableAutoConfiguration` and
-`@ComponentScan`. We will have a deeper look at these Annotations in the
-[next javacasts episode][jc0002].
+`@ComponentScan`.
 
 Simple Console Application
 --------------------------
