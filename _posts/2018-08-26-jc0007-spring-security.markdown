@@ -16,14 +16,12 @@ I used Spring security for web applications, but so far never did set it up on
 myself. So it's time to take a look at on how it is actually working, and at
 which spots I can change it for my needs.
 
-Generally Spring Security is about Authentication and Authorization. Amongst
-those, responsibilities, there are others but Authentication and Authorization
-are the most important duties.  
+Generally Spring Security is mainly about Authentication and Authorization.  
 With the Authentication, the identity of the caller is derived. The *who* is
 answered by the Authentication: *who has requested this resource?*.  
 With the Authorization, the permission of the caller is derived from the
-authentication information. The *what is allowed* by the Authorization: *Is the
-caller allowed to execute this?*.
+authentication information. It's about the answer to *what is allowed* for the
+Authorization like *Is the caller allowed to execute this?*.
 
 The current version of spring security is 5.x, the classes I talk about could
 be different in future releases.
@@ -49,18 +47,20 @@ filter chain:
 The filter chain
 ----------------
 
-The idea of the filter chain is pretty easy. The main interface, that this is
-about is `javax.servlet.Filter`. Besides if an `init` and `destroy` method, it
-contains the method `public void doFilter(ServletRequest request,
-ServletResponse response, FilterChain chain) throws IOException,
-ServletException;`  
-The main idea is easy, you have stacked several filters above each other, call
-the first one with the `doFilter`-method, and it will call the next in the
-chain. Once the last has finished, it will go back again through the whole
-chain.
+The idea of the filter chain is pretty easy. The main interface is
+`javax.servlet.Filter`.  
+Besides the `init` and `destroy` methods, it contains the method `doFilter(ServletRequest request,
+ServletResponse response, FilterChain chain)`. So you get the `request` and the
+`response` of the request and an additional `FilterChain`.  
+The `FilterChain` does the magic here. Each `Filter` is part of the
+`FilterChain`. They are called one after another, stacked above each other. Each
+`Filter` can do whatever it wants with the `request` and the `response`, but
+should send the request down the `FilterChain` by calling
+`chain(request, response)`. Calling this will delegate the request to the next
+`Filter`.
 
-So here's an example `Filter` implementation that can explain what a filter is
-doing:
+To understand this, here's an example `Filter` implementation:
+
 ```java
 @Override
 public void doFilter(final ServletRequest request, final ServletResponse response,
@@ -78,14 +78,15 @@ public void doFilter(final ServletRequest request, final ServletResponse respons
 When the `doFilter` method is called, the `Filter` gets the `ServletRequest`,
 `ServletResponse` and the `FilterChain`. It could completely respond to the
 `ServletRequest` by sending something to the `ServletResponse` and finishing
-itself. By default, it will call `chain.dofilter(request, response)` somewhere
-and pass on the processing of the request/response, but each `Filter` could
-decide that no further processing should happen. It can also completely modify
-the request or add headers to the response.
+itself.
 
-The filter that I created, just takes the time before it passes on to the
-further filter chain, and when returning from it, calculated how many
-milliseconds have passed and writes this to the logging.
+This filter stores the time before it passes the `request` and `response` on to
+the filter chain, and when returning it calculates how many milliseconds have
+passed since.
+
+As you see, Filters are very powerfull. They can add, remove, change data from
+the `request` and `response`, they can even decide not to pass the request
+further down the `FilterChain`, and this is where Spring Security is operating.
 
 The spring security filter chain
 --------------------------------
@@ -264,3 +265,14 @@ implemented.
 
 ### Authorizing against an OAuth2 provider
 
+Enabling oauth is even less to do if you already have a oauth provider set up.
+For convenience I'll just use github as oauth provider. For a deeper information
+on the setup, spring has created an [tutorial](https://spring.io/guides/tutorials/spring-boot-oauth2/)
+that you should look at for further information. All configuration I use here is
+taken from there.
+
+The first update is to add an additional dependency (spring-security-oauth2-autoconfigure)
+that does handle the configuration.  
+Then the application needs a annotation to know to `@EnableOAuth2Sso`.  
+All left to do is to configure the oauth endpoint. This is done with some keys
+in the application configuration.
